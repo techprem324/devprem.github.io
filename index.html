@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prem Kumar Srivastava — Software Developer</title>
+<meta name="description" content="Prem Kumar Srivastava — Software Developer building full-stack web applications with React, Node.js, Express, MySQL and ML foundations in Python.">
+<meta name="author" content="Prem Kumar Srivastava">
+
+<meta property="og:title" content="Prem Kumar Srivastava — Software Developer">
+<meta property="og:description" content="Full-stack developer building production web apps with React, Node.js, Express and MySQL.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devprem.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%233FB950%22>&gt;_</text></svg>">
+</head>
+<body>
+
+<!-- Command palette overlay -->
+<div class="cmdk-overlay" id="cmdkOverlay">
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Command menu">
+    <div class="cmdk-input-row">
+      <span class="cmdk-prompt">$</span>
+      <input type="text" id="cmdkInput" class="cmdk-input" placeholder="go to..." autocomplete="off" spellcheck="false">
+      <kbd class="cmdk-esc">esc</kbd>
+    </div>
+    <ul class="cmdk-list" id="cmdkList">
+      <li data-target="#home"><span class="cmdk-icon">⌂</span> Home <span class="cmdk-hint">go home</span></li>
+      <li data-target="#about"><span class="cmdk-icon">◆</span> About <span class="cmdk-hint">who I am</span></li>
+      <li data-target="#skills"><span class="cmdk-icon">▣</span> Skills <span class="cmdk-hint">stack &amp; tools</span></li>
+      <li data-target="#projects"><span class="cmdk-icon">▲</span> Projects <span class="cmdk-hint">things I've shipped</span></li>
+      <li data-target="#contact"><span class="cmdk-icon">✉</span> Contact <span class="cmdk-hint">say hello</span></li>
+      <li data-target="https://github.com/techprem324" data-external="1"><span class="cmdk-icon">⎘</span> Open GitHub <span class="cmdk-hint">external</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <span class="nav-brand-mark">&gt;_</span>
+      <span class="nav-brand-text">prem<span class="dim">.dev</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" class="nav-link active-link" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="cmdk-trigger" id="cmdkTrigger" aria-label="Open command menu">
+        <span>⌘K</span>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#home" class="nav-mobile-link">Home</a>
+    <a href="#about" class="nav-mobile-link">About</a>
+    <a href="#skills" class="nav-mobile-link">Skills</a>
+    <a href="#projects" class="nav-mobile-link">Projects</a>
+    <a href="#contact" class="nav-mobile-link">Contact</a>
+    <div class="nav-mobile-socials">
+      <a href="https://github.com/techprem324" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/prem-kumar-srivastava-324pp" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="section hero" id="home">
+    <div class="hero-grid">
+
+      <div class="hero-terminal">
+        <div class="term-titlebar">
+          <span class="term-dot term-dot-red"></span>
+          <span class="term-dot term-dot-yellow"></span>
+          <span class="term-dot term-dot-green"></span>
+          <span class="term-path">prem@kolkata:~/portfolio</span>
+        </div>
+        <div class="term-body">
+          <p class="term-line"><span class="term-prompt">$</span> whoami</p>
+          <p class="term-out" id="typedName"></p>
+          <p class="term-line term-line-2"><span class="term-prompt">$</span> cat role.txt</p>
+          <p class="term-out term-out-2">Software Developer — full-stack web &amp; ML-powered apps</p>
+          <p class="term-line term-line-3"><span class="term-prompt">$</span> status --current</p>
+          <p class="term-out term-out-3"><span class="status-dot"></span> Open to SDE roles &amp; internships</p>
+          <p class="term-line term-line-4"><span class="term-prompt">$</span> <span class="term-cursor">▌</span></p>
+        </div>
+      </div>
+
+      <div class="hero-headline">
+        <h1>Building software that <span class="accent-underline">ships</span>, not just compiles.</h1>
+        <p class="hero-sub">Final-year Computer Science engineer from Kolkata, working across React, Node.js, Express and MySQL — with a Data Structures &amp; Algorithms foundation and a growing focus on ML-powered applications.</p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-stats-row">
+        <a class="hero-stat" href="#skills">
+          <span class="stat-num">9.2</span>
+          <span class="stat-label">B.Tech CGPA</span>
+        </a>
+        <a class="hero-stat" href="#projects">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">production projects</span>
+        </a>
+        <a class="hero-stat" href="#about">
+          <span class="stat-num">4</span>
+          <span class="stat-label">certifications completed</span>
+        </a>
+        <div class="hero-stat">
+          <span class="stat-num">2027</span>
+          <span class="stat-label">expected graduation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="section-head">
+      <h2>About</h2>
+      <p class="section-kicker">Currently studying Computer Science Engineering at Brainware University, Kolkata — building things in between semesters.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card about-card-main">
+        <p>I like software that respects the person using it — fast, predictable, and honest when something goes wrong. Most of what I build sits across the full stack: a React interface talking to an Express API, backed by a MySQL schema I've usually drawn out on paper first.</p>
+        <p>Outside of coursework, I've spent time on AI application development with IBM, structured programming with Samsung Innovation Campus, and short courses in cybersecurity operations and privacy-preserving cryptography — pulled in whenever a project needed that grounding.</p>
+      </div>
+
+      <div class="about-card about-card-loc">
+        <span class="about-card-label">Based in</span>
+        <span class="about-card-value">Kolkata, India</span>
+        <span class="about-card-sub">Open to remote &amp; relocation</span>
+      </div>
+
+      <div class="about-card about-card-edu">
+        <span class="about-card-label">Education</span>
+        <span class="about-card-value">B.Tech, Computer Science Engineering</span>
+        <span class="about-card-sub">Brainware University · 2023 – 2027 (expected) · CGPA 9.2</span>
+      </div>
+
+      <div class="about-card about-card-cert">
+        <span class="about-card-label">Recent training</span>
+        <ul class="cert-list">
+          <li>IBM — AI Application Development</li>
+          <li>Samsung Innovation Campus — Coding &amp; Programming</li>
+          <li>Cisco — CyberOps Associate</li>
+          <li>ISI Kolkata (MeitY) — Privacy-Preserving Cryptography</li>
+        </ul>
+      </div>
+
+      <div class="about-card about-card-lang">
+        <span class="about-card-label">Languages</span>
+        <div class="lang-row"><span>Hindi</span><span class="dim">native</span></div>
+        <div class="lang-row"><span>English</span><span class="dim">professional</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <p class="section-kicker">Sized by how much I reach for them, not by an arbitrary percentage.</p>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid">
+      <!-- populated with size classes -->
+      <div class="skill-card size-lg" data-cat="lang">
+        <span class="skill-name">JavaScript</span>
+        <span class="skill-detail">ES6+, async/await, event loop, DOM &amp; REST integration</span>
+      </div>
+      <div class="skill-card size-lg" data-cat="web">
+        <span class="skill-name">React.js</span>
+        <span class="skill-detail">Component architecture, hooks, state management</span>
+      </div>
+      <div class="skill-card size-lg" data-cat="web">
+        <span class="skill-name">Node.js &amp; Express</span>
+        <span class="skill-detail">REST APIs, middleware, non-blocking I/O</span>
+      </div>
+      <div class="skill-card size-md" data-cat="lang">
+        <span class="skill-name">C++</span>
+        <span class="skill-detail">OOP, STL, DSA — trees, graphs, DP</span>
+      </div>
+      <div class="skill-card size-md" data-cat="data">
+        <span class="skill-name">MySQL &amp; MongoDB</span>
+        <span class="skill-detail">Schema design, relations, indexing, transactions</span>
+      </div>
+      <div class="skill-card size-md" data-cat="web">
+        <span class="skill-name">HTML5 &amp; CSS3</span>
+        <span class="skill-detail">Semantic markup, responsive layout, animation</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="data">
+        <span class="skill-name">Python</span>
+        <span class="skill-detail">Pandas, NumPy, Scikit-learn</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="tools">
+        <span class="skill-name">Git &amp; GitHub</span>
+        <span class="skill-detail">Branching, PRs, CLI workflows</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="tools">
+        <span class="skill-name">VS Code</span>
+        <span class="skill-detail">Daily driver, extensions, debugging</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="tools">
+        <span class="skill-name">Figma</span>
+        <span class="skill-detail">Interface design &amp; prototyping</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="lang">
+        <span class="skill-name">Data Structures &amp; Algorithms</span>
+        <span class="skill-detail">Problem solving, complexity analysis</span>
+      </div>
+      <div class="skill-card size-sm" data-cat="data">
+        <span class="skill-name">REST APIs</span>
+        <span class="skill-detail">Design, consumption, documentation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p class="section-kicker">Selected work, pulled straight from what I've actually shipped.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card project-card-feature">
+        <div class="project-top">
+          <span class="project-status"><span class="status-dot"></span> Live</span>
+          <span class="project-date">May – Jul 2026</span>
+        </div>
+        <h3>Hotel Lumina</h3>
+        <p class="project-desc">A multi-page fine-dining &amp; hotel booking website with table reservation and contact-inquiry forms backed by serverless API routes. Designed the relational MySQL schema myself to keep reservation and inquiry data organized and easy to retrieve.</p>
+        <div class="project-stack">
+          <span>React.js</span><span>Node.js</span><span>Express</span><span>MySQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://hotel-lumina-m.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live demo</a>
+          <a href="https://github.com/techprem324" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Source</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-status"><span class="status-dot"></span> Live</span>
+          <span class="project-date">Oct – Nov 2025</span>
+        </div>
+        <h3>URL Shortener 2.0</h3>
+        <p class="project-desc">An upgraded link-shortening service with user authentication, custom aliases and real-time click analytics. Added QR code generation and handled duplicate/invalid URL cases so it holds up under normal misuse.</p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Express</span>
+        </div>
+        <div class="project-links">
+          <a href="https://url-shortner-1-0.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live demo</a>
+          <a href="https://github.com/techprem324" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Source</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-status project-status-archived">Shipped</span>
+          <span class="project-date">Jul – Aug 2026</span>
+        </div>
+        <h3>Portfolio v1</h3>
+        <p class="project-desc">My earlier personal portfolio — animated hero section, interactive skill and project showcases, and a working contact form, with scroll-based reveal animations and modal project details.</p>
+        <div class="project-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://devprem69.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live demo</a>
+          <a href="https://github.com/techprem324" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Source</a>
+        </div>
+      </article>
+
+      <article class="project-card project-card-wide">
+        <div class="project-top">
+          <span class="project-status"><span class="status-dot"></span> Active</span>
+          <span class="project-date">Ongoing</span>
+        </div>
+        <h3>More on GitHub</h3>
+        <p class="project-desc">This page covers the projects detailed on my résumé — the full commit history, experiments and in-progress work live on GitHub.</p>
+        <div class="project-links">
+          <a href="https://github.com/techprem324" target="_blank" rel="noopener" class="btn btn-primary btn-sm">@techprem324 →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p class="section-kicker">Open to SDE internships and full-stack roles. A message here reaches my inbox directly.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card contact-form-card">
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="_replyto" required placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required rows="5" placeholder="What are you building?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="cf-submit">Send message</button>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <a href="mailto:kumar02premsri@gmail.com" class="contact-chip">
+          <span class="contact-chip-label">Email</span>
+          <span class="contact-chip-value">kumar02premsri@gmail.com</span>
+        </a>
+        <a href="tel:+919339520358" class="contact-chip">
+          <span class="contact-chip-label">Phone</span>
+          <span class="contact-chip-value">+91 93395 20358</span>
+        </a>
+        <div class="contact-chip contact-chip-static">
+          <span class="contact-chip-label">Location</span>
+          <span class="contact-chip-value">Kolkata, India</span>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/techprem324" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.08.78 2.18 0 1.58-.01 2.85-.01 3.24 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/prem-kumar-srivastava-324pp" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.9C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.63.5 2.9.56C8.33 24 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.9.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.9-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.5h7.6l5.24 6.93 6.06-6.93Zm-1.29 18.79h2.04L6.49 3.6H4.3l13.3 16.69Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Prem Kumar Srivastava. Built &amp; deployed from scratch.</p>
+  <a href="#home" class="footer-top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
